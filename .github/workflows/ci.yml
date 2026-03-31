@@ -1,0 +1,36 @@
+# Builds and tests the portable XBIM/IFC stack (ByggstyrningRoomImporter.Ifc + unit tests).
+# Revit add-ins (ByggstyrningIFCImporter, ByggstyrningRoomImporter) reference local Revit/Graphisoft
+# installs and are not built in CI.
+
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  dotnet-test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Restore, build, test
+        run: >
+          dotnet test "tools/ByggstyrningRoomImporter/ByggstyrningRoomImporter.Tests/ByggstyrningRoomImporter.Tests.csproj"
+          -c Release
+          --verbosity normal
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: "**/TestResults/**/*"
+          if-no-files-found: ignore
