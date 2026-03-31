@@ -1,0 +1,24 @@
+## Build outputs
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
+## NuGet
+packages/
+*.nupkg
+project.lock.json
+
+## OS / IDE
+Thumbs.db
+Desktop.ini
+*.swp
+.idea/
+
+## Local release artifacts
+dist/
