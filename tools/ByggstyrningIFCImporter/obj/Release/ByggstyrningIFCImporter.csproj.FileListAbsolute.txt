@@ -1,0 +1,7 @@
+C:\Users\JonatanJacobsson\Nobel Center\Building Design - Design Development\02. BIM\C1 Construction (Byggstyrning)\NobelDCATools.extension\tools\ByggstyrningIFCImporter\bin\Release\ByggstyrningIFCImporter.dll
+C:\Users\JonatanJacobsson\Nobel Center\Building Design - Design Development\02. BIM\C1 Construction (Byggstyrning)\NobelDCATools.extension\tools\ByggstyrningIFCImporter\bin\Release\ByggstyrningIFCImporter.pdb
+C:\Users\JonatanJacobsson\Nobel Center\Building Design - Design Development\02. BIM\C1 Construction (Byggstyrning)\NobelDCATools.extension\tools\ByggstyrningIFCImporter\obj\Release\ByggstyrningIFCImporter.csproj.AssemblyReference.cache
+C:\Users\JonatanJacobsson\Nobel Center\Building Design - Design Development\02. BIM\C1 Construction (Byggstyrning)\NobelDCATools.extension\tools\ByggstyrningIFCImporter\obj\Release\ByggstyrningIFCImporter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JonatanJacobsson\Nobel Center\Building Design - Design Development\02. BIM\C1 Construction (Byggstyrning)\NobelDCATools.extension\tools\ByggstyrningIFCImporter\obj\Release\ByggstyrningIFCImporter.csproj.CoreCompileInputs.cache
+C:\Users\JonatanJacobsson\Nobel Center\Building Design - Design Development\02. BIM\C1 Construction (Byggstyrning)\NobelDCATools.extension\tools\ByggstyrningIFCImporter\obj\Release\ByggstyrningIFCImporter.dll
+C:\Users\JonatanJacobsson\Nobel Center\Building Design - Design Development\02. BIM\C1 Construction (Byggstyrning)\NobelDCATools.extension\tools\ByggstyrningIFCImporter\obj\Release\ByggstyrningIFCImporter.pdb

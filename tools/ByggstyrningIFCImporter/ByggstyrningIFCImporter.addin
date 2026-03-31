@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Assembly>ByggstyrningIFCImporter.dll</Assembly>
+    <FullClassName>Byggstyrning.IFCImporter.ImporterApp</FullClassName>
+    <AddInId>8A3D4F6E-B1C2-4D5E-9F0A-1B2C3D4E5F60</AddInId>
+    <Name>Byggstyrning-IFC-Importer</Name>
+    <VendorId>BYGGSTYRNING</VendorId>
+    <VendorDescription>Byggstyrning IFC automation (Graphisoft correction path)</VendorDescription>
+  </AddIn>
+</RevitAddIns>

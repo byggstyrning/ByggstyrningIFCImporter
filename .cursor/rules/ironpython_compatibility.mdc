@@ -1,0 +1,14 @@
+---
+description: IronPython 2.7 / pyRevit compatibility quick reference
+alwaysApply: true
+---
+
+# IronPython 2.7 (pyRevit)
+
+- **No f-strings** — use `.format()` or concatenation.
+- **Prefer `.format()` over `%` formatting** — avoids accidental `%` interpolation issues.
+- **No CPython C-extension modules** (e.g. numpy, scipy); use pure Python or .NET APIs.
+- **`lib/` is cached** at extension load — after editing `lib/`, **reload the extension** (unlike `.pushbutton` scripts).
+- **Dispose** .NET `IDisposable` objects when holding them across scopes.
+- **`hasattr()`** in cleanup paths (`OnClosing`) before touching optional attributes.
+- **Revit API** only on the main thread; modeless WPF uses **ExternalEvent** for document changes.

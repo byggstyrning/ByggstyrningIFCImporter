@@ -1,0 +1,13 @@
+# Pipeline outputs under demo/out (RVT, JSON, logs, etc.); keep README only
+demo/out/**
+!demo/out/README.txt
+
+# demo/in: only Revit models are versioned; IFC, JSON, sidecars, etc. stay local
+demo/in/*
+!demo/in/*.rvt
+
+Nobel_inplace_*.rfa
+
+# IFC models (large binaries; keep local only)
+**/*.ifc
+**/*.ifczip

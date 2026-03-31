@@ -1,0 +1,16 @@
+' ArchiCAD "Improved IFC Import" plugin commands
+' Captured from: Revit 2025 / ArchiCAD IFC Exchange 28.0.0.3014
+'
+' WARNING: The Improved IFC Import command shows a CUSTOM dialog
+' (not a standard Revit FileDialog). The journal player will BLOCK
+' when it reaches this command, waiting for the custom dialog to be
+' dismissed.  This file is a PLACEHOLDER -- see README.md for
+' workaround options.
+'
+' If you have a FULL recorded journal that includes the import,
+' re-capture with  Capture-ArchiCADJournal.ps1  and paste the
+' relevant lines below (replacing this block).
+
+  Jrn.RibbonEvent "Execute external command:CustomCtrl_%CustomCtrl_%Add-Ins%IFC Exchange with Archicad%Improved IFC Import:Graphisoft.IFCImporter"
+Jrn.Data  _
+        "APIStringStringMapJournalData"  , 0

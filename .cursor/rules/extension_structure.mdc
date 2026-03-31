@@ -1,0 +1,10 @@
+---
+description: RBP task scripts under scripts/rbp (BatchRvt)
+alwaysApply: true
+---
+
+# BatchRvt scripts (`scripts/rbp/`)
+
+- **Task folders** — one folder per pipeline step, e.g. `setup/`, `merge_rooms/`, `publish_acc/` (retired: in-place convert kit under `archive/inplace-convert-kit/`).
+- **RBP entry** — `*_rbp.py` files; they resolve the repo root via `lib/rbp_paths.py` (walks up until `lib/` + `settings.json`), then import shared code from `lib/`.
+- **PyRevit `script.py`** — not used for this pipeline; old ribbon wrappers live under `archive/pyrevit-ribbon-scripts/` (see `NOTES.md` there).

@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = Byggstyrning.RoomImporter
+build_property.ProjectDir = C:\Users\JonatanJacobsson\Nobel Center\Building Design - Design Development\02. BIM\C1 Construction (Byggstyrning)\NobelDCATools.extension\tools\ByggstyrningRoomImporter\ByggstyrningRoomImporter\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

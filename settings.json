@@ -1,0 +1,12 @@
+{
+    "default_paths": {
+        "dca_ifc_path": "C:\\Users\\Nattugglan\\Nobel Center\\Building Design - 02. BIM\\A1 Architecture (DCA)\\01. MODEL",
+        "config_path": "C:\\Users\\Nattugglan\\DC\\ACCDocs\\Byggstyrning\\Nobel Center\\Project Files\\Config",
+        "config_template_filename": "Nobel Center Revit Template file.rvt",
+        "default_true_north_angle": 25.427667841533
+    },
+    "workset_names": {
+        "architectural": "DCA-Architectural",
+        "structural": "DCA-Structural"
+    }
+}
