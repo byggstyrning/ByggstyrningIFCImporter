@@ -59,6 +59,26 @@ From the **repository root**:
 
 Use `-RevitYear` to match your installed Revit. For a full example with explicit output paths, seed RVT, and prerequisites, see [`docs/README-pipeline.txt`](docs/README-pipeline.txt).
 
+## C# add-ins — build, install, and releases
+
+| Component | Role |
+|-----------|------|
+| **ByggstyrningIFCImporter** | Headless Graphisoft path: `OpenIFCDocument` + `CorrectIFCImport` (no Graphisoft UI). |
+| **ByggstyrningRoomImporter** | xBIM-based rooms IFC import; loaded at runtime by BatchRvt / IronPython via `BYGG_XBIM_ROOMS_DLL`. |
+
+**Prerequisites:** Windows, **Revit** (projects reference Revit API — edit `.csproj` HintPaths if you use another year), **.NET SDK** for **net48**. ByggstyrningIFCImporter needs Graphisoft **IFC Model Exchange with Archicad for Revit** (same year as Revit). ByggstyrningRoomImporter restores **Xbim.Essentials** via NuGet.
+
+**Build** from the repository root:
+
+```powershell
+dotnet build "tools\ByggstyrningIFCImporter\ByggstyrningIFCImporter.csproj" -c Release
+dotnet build "tools\ByggstyrningRoomImporter\ByggstyrningRoomImporter\ByggstyrningRoomImporter.csproj" -c Release
+```
+
+**Install (from source build):** copy `ByggstyrningIFCImporter.dll` and `ByggstyrningIFCImporter.addin` to `%APPDATA%\Autodesk\Revit\Addins\<year>\`. Deploy the room importer’s full `bin\Release` output; set `BYGG_XBIM_ROOMS_DLL` to the full path of `ByggstyrningRoomImporter.dll`. Prefer AppData over Program Files for unsigned builds (see `Deploy-ToProgramFiles.ps1`).
+
+**GitHub Releases:** on a machine with Revit + Graphisoft, run `.\scripts\Package-Release.ps1 -RevitYear 2025`; outputs go to `dist/` as zip artifacts. GitHub-hosted runners do not include Revit; CI runs **xBIM unit tests** only.
+
 ## Further reading
 
 - **[requirements.md](requirements.md)** — software, build, and runtime prerequisites  
@@ -69,3 +89,7 @@ Use `-RevitYear` to match your installed Revit. For a full example with explicit
 - **[docs/graphisoft-revit-plugin-api-notes.md](docs/graphisoft-revit-plugin-api-notes.md)** — Graphisoft IFC for Revit API notes (Archicad import automation)
 
 This repository is maintained for **Byggstyrning** (construction coordination) BIM workflows.
+
+## License
+
+See [LICENSE](LICENSE).

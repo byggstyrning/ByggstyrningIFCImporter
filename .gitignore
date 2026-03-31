@@ -12,13 +12,34 @@ Nobel_inplace_*.rfa
 **/*.ifc
 **/*.ifczip
 
-# .NET / MSBuild (restore with dotnet restore / build)
+## Build outputs
 **/bin/
 **/obj/
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
 *.user
 *.suo
+*.userosscache
+*.sln.docstates
+.vs/
 
-# Python bytecode
+## NuGet
+packages/
+*.nupkg
+project.lock.json
+
+## Python bytecode
 **/__pycache__/
 *.pyc
 *.pyo
+
+## OS / IDE
+Thumbs.db
+Desktop.ini
+*.swp
+.idea/
+
+## Local release artifacts
+dist/

@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  github-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+          body: |
+            First stable release of the Byggstyrning IFC add-in sources (**ByggstyrningIFCImporter** + **ByggstyrningRoomImporter**).
+
+            Pre-built Windows zips are not produced on GitHub-hosted runners (Revit API required). After building locally with `.\scripts\Package-Release.ps1`, attach the `dist\*.zip` files to this release if you publish binaries.
+
+            See the [README](https://github.com/byggstyrning/ByggstyrningIFCImporter/blob/main/README.md) for prerequisites and install paths.

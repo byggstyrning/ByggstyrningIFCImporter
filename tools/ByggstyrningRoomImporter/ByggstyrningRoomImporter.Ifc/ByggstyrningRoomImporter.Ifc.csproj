@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net48;net8.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Byggstyrning.RoomImporter.Ifc</RootNamespace>
+    <AssemblyName>ByggstyrningRoomImporter.Ifc</AssemblyName>
+    <Nullable>enable</Nullable>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Xbim.Essentials" Version="6.0.489" />
+  </ItemGroup>
+</Project>
