@@ -11,3 +11,14 @@ Nobel_inplace_*.rfa
 # IFC models (large binaries; keep local only)
 **/*.ifc
 **/*.ifczip
+
+# .NET / MSBuild (restore with dotnet restore / build)
+**/bin/
+**/obj/
+*.user
+*.suo
+
+# Python bytecode
+**/__pycache__/
+*.pyc
+*.pyo
